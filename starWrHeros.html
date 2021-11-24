@@ -8,9 +8,9 @@
 </head>
 <style>
      body{
-        background: url("https://media0.giphy.com/media/jaOXKCxtBPLieRLI0c/giphy.gif?cid=ecf05e4706duk6gb006h4hj2402dxbnys8wdraqye14fw4d1&rid=giphy.gif&ct=g");
+        /* background: url("https://media0.giphy.com/media/jaOXKCxtBPLieRLI0c/giphy.gif?cid=ecf05e4706duk6gb006h4hj2402dxbnys8wdraqye14fw4d1&rid=giphy.gif&ct=g");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
         font-family: sans-serif;
         color:yellow; 
         padding:5%;
@@ -32,6 +32,7 @@
        flex-basis: 45%;
        border: 1px solid yellow;
        border-radius: 8px;
+       background-color: black;
    }
    button{
        color:yellow;
@@ -50,10 +51,26 @@
     border: 1px solid white;
       color: white;
    }
+   #background-video {
+   height: 100vh;
+   width: 100vw;
+   object-fit: cover;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+}
    
 </style>
 <body>
     <div class="container">
+        <div>
+            <video id="background-video" autoplay muted loop >
+                <source src="stars.mp4" type="video/mp4">
+            </video>
+           </div>
         <h1 id="heading"></h1>
         <div class="details">
             <div class="personalInfo" >
